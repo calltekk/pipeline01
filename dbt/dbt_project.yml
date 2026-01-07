@@ -1,0 +1,13 @@
+name: "pipeline01"
+version: "1.0.0"
+config-version: 2
+
+profile: "pipeline01"
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  pipeline01:
+    +materialized: table
